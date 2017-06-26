@@ -1,5 +1,6 @@
 <html>
 <head>
+<link rel="stylesheet" href="hoja_estilo.css">
 <title>Cuadro de Mando: Recurso</title>
 </head>
 <body>
@@ -9,16 +10,18 @@ require 'sql.php';
 $recursoId=$_GET["usuario"];
 $recurso= \sql\ObtenerNombreRecurso($recursoId)["Nombre_Recurso"];
 
-echo "<br> Cuadro de Mando: Recurso<hr>";
-echo "<br> ID: $recursoId<br>";
-echo "<br> Nombre: $recurso<hr>";		
+echo "<div class='cabecera'>";
+echo "<h1> Cuadro de Mando: Recurso</h1>";
+echo "<h2> ID: $recursoId</h2>";
+echo "<h2> Nombre: $recurso</h2><hr>";
+echo "</div>";		
 
 $miUltimaHojaDeHoras = \sql\ObtenerMiUltimaHojaDeHoras($recursoId);
-
-echo "<br> Mi última hoja de horas<br><br>";
+echo "<div>";
+echo "<h3> Mi última hoja de horas</h3>";
 
 if (count($miUltimaHojaDeHoras) > 0) {
-    echo "<table border= 1px solid black><tr><th>Semana</th><th>Proyecto</th><th>Horas</th></tr>";
+    echo "<table><tr><th>Semana</th><th>Proyecto</th><th>Horas</th></tr>";
     foreach ($miUltimaHojaDeHoras as $hojaDeHoras) {
         echo "<tr><td>" . $hojaDeHoras["Semana"]. "</td><td>" . $hojaDeHoras["Proyecto"]. "</td><td>" . $hojaDeHoras["Horas"]. "</td></tr>";
     }
@@ -29,10 +32,10 @@ if (count($miUltimaHojaDeHoras) > 0) {
 		
 $resumenImputacionProyectos = \sql\ObtenerResumenImputacionProyectos($recursoId);
 
-echo "<hr><br> Resumen de imputación a proyectos<br><br>";
+echo "<h3> Resumen de imputación a proyectos</h3>";
 
 if (count($resumenImputacionProyectos) > 0) {
-    echo "<table border= 1px solid black><tr><th>Proyecto</th><th>Suma_Horas</th></tr>";
+    echo "<table><tr><th>Proyecto</th><th>Suma_Horas</th></tr>";
     foreach ($resumenImputacionProyectos as $proyecto) {
         echo "<tr><td>" . $proyecto["Proyecto"]. "</td><td>" . $proyecto["Suma_Horas"]. "</td></tr>";
     }
@@ -40,7 +43,7 @@ if (count($resumenImputacionProyectos) > 0) {
 } else {
     echo "0 results";
 }
-
+echo "</div>";
 ?>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script type="text/javascript">

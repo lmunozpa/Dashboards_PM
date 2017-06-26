@@ -1,0 +1,30 @@
+body {
+	background-image: url("logo.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+h1 {
+    text-align: center;
+	
+}
+
+h2 {
+    text-align: left;
+}
+
+h3{
+    text-align: left;
+}
+
+table {
+   border: 1px solid black;
+   border-collapse: collapse;
+}
+
+tr:nth-child(even) {background-color: lightgrey}
+
+th {
+    background-color: darkviolet;
+    color: white;
+}
