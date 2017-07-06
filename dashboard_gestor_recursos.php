@@ -23,7 +23,7 @@ echo "<h3> Mi equipo</h3>";
 if (count($miEquipo) > 0) {
     echo "<table><tr><th>Nombre_Recurso</th><th>Rol_Recurso</th><th>Ultima_Hoja_Horas</th></tr>";
     foreach ($miEquipo as $recurso) {
-        echo "<tr><td>" . $recurso["Nombre_Recurso"]. "</td><td>" . $recurso["Rol_Recurso"]. "</td><td>" . $recurso["Ultima_Hoja_Horas"]. "</td></tr>";
+        echo "<tr><td>" . $recurso["Nombre_Recurso"]. "</td><td>" . $recurso["Rol_Recurso"]. "</td><td align=\"right\">" . $recurso["Ultima_Hoja_Horas"]. "</td></tr>";
     }
 	echo "</table>";
 } else {
@@ -37,7 +37,7 @@ echo "<h3> Recursos y proyectos: Planificado vs Actual</h3>";
 if (count($recursosProyectosPlanificadoActual) > 0) {
     echo "<table><tr><th>Nombre_Recurso</th><th>Nombre_Proyecto</th><th>Horas_Planificadas</th><th>Horas_Imputadas</th></tr>";
     foreach ($recursosProyectosPlanificadoActual as $recurso) {
-        echo "<tr><td>" . $recurso["Nombre_Recurso"]. "</td><td>" . $recurso["Nombre_Proyecto"]. "</td><td>" . $recurso["Horas_Planificadas"]. "</td><td>" . $recurso["Horas_Imputadas"]. "</td></tr>";
+        echo "<tr><td>" . $recurso["Nombre_Recurso"]. "</td><td>" . $recurso["Nombre_Proyecto"]. "</td><td align=\"right\">" . $recurso["Horas_Planificadas"]. "</td><td align=\"right\">" . $recurso["Horas_Imputadas"]. "</td></tr>";
     }
 	echo "</table>";
 } else {

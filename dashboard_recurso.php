@@ -23,7 +23,7 @@ echo "<h3> Mi última hoja de horas</h3>";
 if (count($miUltimaHojaDeHoras) > 0) {
     echo "<table><tr><th>Semana</th><th>Proyecto</th><th>Horas</th></tr>";
     foreach ($miUltimaHojaDeHoras as $hojaDeHoras) {
-        echo "<tr><td>" . $hojaDeHoras["Semana"]. "</td><td>" . $hojaDeHoras["Proyecto"]. "</td><td>" . $hojaDeHoras["Horas"]. "</td></tr>";
+        echo "<tr><td>" . $hojaDeHoras["Semana"]. "</td><td>" . $hojaDeHoras["Proyecto"]. "</td><td align=\"right\">" . $hojaDeHoras["Horas"]. "</td></tr>";
     }
 	echo "</table>";
 } else {
@@ -37,7 +37,7 @@ echo "<h3> Resumen de imputación a proyectos</h3>";
 if (count($resumenImputacionProyectos) > 0) {
     echo "<table><tr><th>Proyecto</th><th>Suma_Horas</th></tr>";
     foreach ($resumenImputacionProyectos as $proyecto) {
-        echo "<tr><td>" . $proyecto["Proyecto"]. "</td><td>" . $proyecto["Suma_Horas"]. "</td></tr>";
+        echo "<tr><td>" . $proyecto["Proyecto"]. "</td><td align=\"right\">" . $proyecto["Suma_Horas"]. "</td></tr>";
     }
 	echo "</table>";
 } else {
