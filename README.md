@@ -2,7 +2,7 @@
 Cuadros de Mando de Gestión de Proyectos
 Desarrollados en el ámbito del TFG para el Curso de adaptación al Grado en Ingeniería Informática 2016-2017 en la UNIR
 
-Desarrollado con utilizando las siguientes versiones de mysql, php y apache en windows:
+Desarrollado utilizando las siguientes versiones de mysql, php y apache en windows:
 mysql-installer-community-5.7.18.1
 php-7.1.3-Win32-VC14-x86
 httpd-2.4.25-win32-VC14
